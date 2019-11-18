@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "bd3e6c3e-c6e2-4cd9-8b3f-61d1e8c7274b",
+		"name": "Restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44348/api/menu/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/menu/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"menu",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44348/api/restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/restaurant",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44348/api/restaurant/menus/1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8f774f39-353c-4451-9997-c9786c0331fa",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/restaurant/menus/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"restaurant",
+						"menus",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44348/api/restaurant/reviews/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/restaurant/reviews/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"restaurant",
+						"reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44348/api/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"altomare.tiago@gmail.com\",\n\t\"accessKey\": \"94be650011cf412ca906fc335f615cdc\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44348/api/order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6WyJhbHRvbWFyZS50aWFnb0BnbWFpbC5jb20iLCJhbHRvbWFyZS50aWFnb0BnbWFpbC5jb20iXSwianRpIjoiYjUwNTI1M2U3YjFjNGU4OGI5YTkxZDU5MmI1Yzg5ZjIiLCJuYmYiOjE1NTc3MTU0MzAsImV4cCI6MTU1NzcxNTU1MCwiaWF0IjoxNTU3NzE1NDMwLCJpc3MiOiJFeGVtcGxvSXNzdWVyIiwiYXVkIjoiRXhlbXBsb0F1ZGllbmNlIn0.oPZVhMZ-121fZhPNHMbtv4y1YR8X20MlTR14wsuHmTLcXmnne-KEHf0tyr-wcA7uNQ4yJab4eop70cEtGXC8q_cRCGARxJ_kaZA6jjF-Gxwivy3EDggjtHVRuZ3Ic8Ar7hcY8z_iL9PtwLhNM45b_14YpQw-D8-15YyZHpbJpFWrv0LHSh3OP9MVZ3uDDNZNvPCbuYDASTX10501GMxqLuJEzfHg_wZcrYYLaFiQVREXLhf-NUs9KraUVPNT9rqwGn9U1H6gPnGfp-YLYCWa199iM_X17wr9aSFpxqyt8L1QUipGU39T3w9YjJB5uxaxuqIIpAWGCgIpOrF7dKGQbg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"rua\",\n    \"number\": 1,\n    \"optionalAddress\": \"comple\",\n    \"paymentOption\": \"Dinheiro\",\n    \"telephone\": \"991888006\",\n    \"email\": \"altomare.tiago@gmail.com\",\n    \"OrderItem\": [{\n    \t\t\"quantity\": 1,\n\t\t\t\"menuId\": 1,\n\t\t\t\"price\": 9\n    \t},{\n    \t\t\"quantity\": 2,\n\t\t\t\"menuId\": 2,\n\t\t\t\"price\": 6\n    \t}]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/order",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
